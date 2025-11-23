@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cyber-Dodo : Développement Web, Java, Mobile, et Hébergement. Solutions IT complètes.">
+    <title>Cyber-Dodo | Dev & Hébergement</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            dark: '#0a0f1c',      // Plus sombre pour le contraste
+                            primary: '#3b82f6',   // Bleu
+                            accent: '#06b6d4',    // Cyan
+                            neon: '#8b5cf6',      // Violet
+                            java: '#f89820'       // Orange Java
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 15s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-cyber-dark text-slate-100 antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider flex items-center gap-2 z-50">
+                <i class="fa-solid fa-robot text-cyber-accent animate-pulse"></i> 
+                <span>CYBER-<span class="text-cyber-primary">DODO</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="nav-link hover:text-cyber-accent transition">Services</a>
+                <a href="#expertise" class="nav-link hover:text-cyber-accent transition">Expertise</a>
+                <a href="#contact" class="btn-glow bg-gradient-to-r from-cyber-primary to-cyber-accent px-6 py-2 rounded-full font-bold text-white">
+                    Démarrer un projet
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden z-50 text-2xl text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-cyber-dark/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8">
+            <a href="#services" class="mobile-link text-2xl font-bold">Services</a>
+            <a href="#expertise" class="mobile-link text-2xl font-bold">Expertise</a>
+            <a href="#contact" class="mobile-link text-2xl font-bold text-cyber-accent">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 w-full h-full">
+            <div class="cyber-grid absolute inset-0 opacity-20"></div>
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-block mb-6" data-aos="fade-down">
+                <span class="px-4 py-2 rounded-full border border-cyber-accent/30 bg-cyber-accent/10 text-cyber-accent text-sm font-mono">
+                    <i class="fa-solid fa-terminal mr-2"></i>System.out.println("Hello World");
+                </span>
+            </div>
+
+            <h1 class="text-5xl md:text-8xl font-bold mb-8 leading-tight tracking-tight" data-aos="fade-up">
+                Dev Web, Mobile <br> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-primary via-cyber-accent to-cyber-neon animate-gradient">
+                    & Infrastructure
+                </span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                Je conçois vos applications complexes, j'automatise vos tâches et j'héberge vos succès. 
+                <span class="text-white font-medium">Tout le cycle IT, un seul expert.</span>
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="group relative px-8 py-4 bg-white text-cyber-dark rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-105">
+                    <span class="relative z-10">Me contacter</span>
+                    <div class="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-cyan-300"></div>
+                </a>
+                <a href="#services" class="px-8 py-4 rounded-full border border-slate-600 text-white font-bold text-lg hover:border-cyber-accent hover:text-cyber-accent transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-down"></i> Découvrir
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500">
+            <i class="fa-solid fa-angles-down"></i>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-900/30 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Services <span class="text-cyber-primary">Full-Stack</span></h2>
+                <p class="text-gray-400">De la ligne de code au serveur de production.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 backdrop-blur-sm" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 text-cyber-primary text-3xl">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Développement</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Sites web modernes, applications mobiles (iOS/Android) et logiciels sur-mesure. J'utilise les dernières technos pour un rendu fluide.
+                    </p>
+                </div>
+
+                <div class="service-card bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 text-cyber-neon text-3xl">
+                        <i class="fa-solid fa-cogs"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Batch & Automation</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Traitement de données complexes, scripts d'automatisation, API robustes. Je rends les processus lourds invisibles et rapides.
+                    </p>
+                </div>
+
+                <div class="service-card bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-8 text-cyber-accent text-3xl">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Hébergement & IT</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Hébergement web sécurisé, maintenance serveur et assistance informatique. Votre infrastructure est entre de bonnes mains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="bg-slate-800/40 rounded-3xl p-12 border border-slate-700/50">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold mb-6">Stack Technique</h3>
+                        <p class="text-gray-400 mb-8">
+                            Pas de limites techniques. Je choisis l'outil le plus adapté à la performance et à la stabilité de votre projet.
+                        </p>
+                        
+                        <div class="grid grid-cols-4 gap-6 text-4xl text-gray-500">
+                            <i class="fa-brands fa-java hover:text-orange-500 transition transform hover:scale-110 cursor-pointer" title="Java"></i>
+                            <i class="fa-brands fa-js hover:text-yellow-400 transition transform hover:scale-110 cursor-pointer" title="JavaScript"></i>
+                            <i class="fa-brands fa-react hover:text-blue-400 transition transform hover:scale-110 cursor-pointer" title="React/Native"></i>
+                            <i class="fa-brands fa-python hover:text-blue-300 transition transform hover:scale-110 cursor-pointer" title="Scripting"></i>
+                            <i class="fa-brands fa-docker hover:text-blue-600 transition transform hover:scale-110 cursor-pointer" title="Docker"></i>
+                            <i class="fa-solid fa-database hover:text-green-400 transition transform hover:scale-110 cursor-pointer" title="SQL/NoSQL"></i>
+                            <i class="fa-brands fa-linux hover:text-white transition transform hover:scale-110 cursor-pointer" title="Linux Admin"></i>
+                            <i class="fa-brands fa-aws hover:text-orange-400 transition transform hover:scale-110 cursor-pointer" title="Cloud"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 border-l border-slate-700 pl-12">
+                        <h3 class="text-3xl font-bold mb-6">Assistance & Support</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 text-gray-300">
+                                <span class="w-8 h-8 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center"><i class="fa-solid fa-headset"></i></span>
+                                Dépannage à distance ou sur site
+                            </li>
+                            <li class="flex items-center gap-4 text-gray-300">
+                                <span class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center"><i class="fa-solid fa-shield-halved"></i></span>
+                                Sécurisation de parc informatique
+                            </li>
+                            <li class="flex items-center gap-4 text-gray-300">
+                                <span class="w-8 h-8 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                Migration et gestion de sauvegardes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8">Un projet ? Un bug ?</h2>
+            <p class="text-xl text-gray-400 mb-10">Contactez Cyber-Dodo pour une réponse rapide.</p>
+            
+            <a href="mailto:contact@cyber-dodo.fr" class="inline-block bg-gradient-to-r from-cyber-primary to-cyber-accent px-10 py-5 rounded-full text-xl font-bold text-white shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/60 transition transform hover:-translate-y-1">
+                contact@cyber-dodo.fr
+            </a>
+            
+            <div class="mt-12 flex justify-center gap-8 text-3xl text-gray-500">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        
+        <footer class="absolute bottom-4 w-full text-center text-gray-600 text-sm">
+            &copy; 2025 Cyber-Dodo. Hébergé et développé avec ❤️.
+        </footer>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
