@@ -2,7 +2,7 @@
 
 /* 1. Glass Navigation */
 .glass-nav {
-    background: rgba(10, 15, 28, 0.7);
+    background: rgba(10, 15, 28, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -76,6 +76,7 @@
 .service-card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .service-card:hover {
     transform: translateY(-10px);
     background: rgba(30, 41, 59, 0.8);
@@ -83,7 +84,7 @@
     box-shadow: 0 20px 30px -10px rgba(6, 182, 212, 0.2);
 }
 
-/* Ajout de styles spécifiques pour les nouveaux hovers */
+/* 6. Tech Icons Hover */
 .tech-icon-wrapper {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -93,11 +94,24 @@
     filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
 }
 
+/* 7. Social Links Hover */
 .social-link:hover {
     transform: translateY(-3px);
     text-shadow: 0 0 10px rgba(6, 182, 212, 0.8);
 }
 
+/* 8. Logo */
 .logo {
     width: 9%;
+    min-width: 40px;
+    max-width: 60px;
+}
+
+/* 9. Mobile Menu */
+#mobile-menu {
+    background: #0a0f1c;
+}
+
+#mobile-menu.active {
+    transform: translateX(0);
 }
