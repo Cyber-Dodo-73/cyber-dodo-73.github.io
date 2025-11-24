@@ -4,11 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://cyber-dodo.fr/sitemap.xml
+Sitemap: https://www.cyber-dodo.fr/sitemap.xml
 
 # Délai entre les requêtes (en secondes)
 Crawl-delay: 1
-
-# Bloquer les répertoires sensibles si nécessaire
-# Disallow: /admin/
-# Disallow: /private/
