@@ -1,0 +1,69 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Éditeurs et IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dépendances (si utilisation de npm/yarn à l'avenir)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Fichiers de build
+dist/
+build/
+*.min.js
+*.min.css
+
+# Fichiers de cache
+.cache/
+.parcel-cache/
+
+# Environnement
+.env
+.env.local
+.env.*.local
+
+# Fichiers temporaires
+tmp/
+temp/
+*.tmp
+
+# Sauvegardes
+*.bak
+*.backup
+*~
+
+# Fichiers sensibles (ne jamais commit)
+config/credentials.js
+config/secrets.json
+*.key
+*.pem
+*.cert
+
+# Assets volumineux (utiliser Git LFS si nécessaire)
+*.mov
+*.mp4
+*.avi
+*.mkv
+
+# Fichiers de test
+coverage/
+.nyc_output/
+
+# Documentation générée
+docs/_build/
